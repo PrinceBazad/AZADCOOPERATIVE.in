@@ -1,0 +1,37 @@
+
+{% extends 'website/basic.html' %}
+{%block title %} AZAD COOPERATIVE ANNUAL REPORT{% endblock %}
+
+{% block body %}
+
+{%load static%}
+
+  <section class="annualreport" style="margin-top: 0px;padding-top: 100px;">
+    <div class="news-header">
+        <h2 class="heading2">Annual Report</h2>
+    </div>
+    <div class="annualreportbtn" >
+        <a href="/media/{{AnnualReport.0.AnnualReport_file}}"><img src="/media/{{AnnualReport.0.AnnualReport_image}}"id="annualreportbutton"/></a>
+    </div>
+  </section>
+
+
+  <section class="discover-more">
+    <h2>Discover More</h2>
+    <div class="divider"></div>
+    <div class="card-container">
+      <div class="card">
+        <a href="aboutus/"><img src="https://www.famesociety.in/static/images/about_us_1%403x.png" alt="About Us"></a>
+      </div>
+      <div class="card">
+        <a href="Products/"><img src="https://www.famesociety.in/static/images/products%403x.png" alt="Products"></a>
+        
+      </div>
+      <div class="card">
+        <a href="Branch/"><img src="https://www.famesociety.in/static/images/our_branches%403x.png" alt="Our Branches"></a>
+        
+      </div>
+    </div>
+  </section>   
+      
+      {% endblock %}

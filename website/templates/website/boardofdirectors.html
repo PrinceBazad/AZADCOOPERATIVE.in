@@ -1,0 +1,36 @@
+
+{% extends 'website/basic.html' %}
+{%block title %} AZAD COOPERATIVE DIRECTORS {% endblock %}
+
+{% block body %}
+
+{%load static%}
+      <section class="directors-section">
+        <div class="container">
+            <h2 class="section-title">Board Of Directors</h2>
+            <table class="directors-table">
+              <thead>
+                  <tr>
+                      <th>S.No</th>
+                      <th>Name</th>
+                      <th>Designation</th>
+                      <th>Mobile</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for i in director %}
+                  <tr>
+                      <td>{{forloop.counter}}</td>
+                      <td>{{i.director_name}}</td>
+                      <td>{{i.director_title}}</td>
+                      <td>{{i.director_phone}}</td>
+                  </tr>
+                  {% endfor %}
+                  
+              </tbody>
+          </table>
+        </div>
+    </section>
+      
+
+    {% endblock %}

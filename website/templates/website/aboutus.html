@@ -1,0 +1,58 @@
+
+{% extends 'website/basic.html' %}
+{%block title %} AZAD COOPERATIVE ABOUTUS{% endblock %}
+
+{% block body %}
+
+{%load static%}
+      <section class="about-section" id="aboutus" style="padding-top:100px;margin-left:10px;margin-right:10px;">
+        <div class="about-content">
+          <div class="about-images">
+            <img src='https://www.famesociety.in/static/images/about_us-100.jpg' alt="Farmer Smiling" class="image-large">
+          </div>
+          <div class="about-text">
+            <h2 class="heading2">About Us</h2>
+            <p>
+              <strong>{{Homeslide.0.Heading}}</strong> was established in {{Homeslide.0.Establishedyear}} as a Multistate Cooperative Society under Registration No: {{Homeslide.0.Registrationnumber}} - Lum. Located in {{Homeslide.0.Address}}  our society has been dedicated to supporting the agricultural community for decades.</p>
+
+              <p>We function as a trusted Commission Agent in compliance with the Agriculture Produce Marketing Committee's regulations and specialize in trading a wide range of agricultural products. Our commitment is to empower farmers by providing high-quality agricultural inputs and reliable services.</p>
+              
+              
+              <p><strong>Registration No:</strong>{{Homeslide.0.Registrationnumber}}- Lum (Multistate Cooperative Society (formed in {{About.0.About_Establishedyear}}))</p>
+              
+              <p><strong>Working :</strong> Society working as Commission Agent as per Agriculture Produce Marketing Committee | Trading - Agriculture Product</p>
+              
+              <p>Society deals in fertilizer, Insecticide & seeds.</p>
+              
+              <p><strong>fertilizer</strong> - {{About.0.Aboutpage_fertilizer}}</p>
+              
+              <p><strong>Seeds  - </strong>  All kinds of Agriculture use seed.</p>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="vision-mission-section">
+        <div class="vision-mission-section-container">
+            <div class="vision">
+                <div class="icon">
+                    <img src='https://www.famesociety.in/static/images/vision_icon%403x.png' alt="Vision Icon" style="border-radius: 30px;">
+                </div>
+                <h2>Our Vision</h2>
+                <p>{{About.0.About_visionpara}}</p>
+            </div>
+            <div class="image">
+                <img src='https://www.famesociety.in/static/images/vision_imgae%403x.png'alt="Farmer">
+            </div>
+            <div class="mission">
+                <div class="icon">
+                    <img src='https://www.famesociety.in/static/images/mission_icon%403x.png'alt="Mission Icon"style="border-radius: 30px;">
+                </div>
+                <h2>Our Mission</h2>
+                <p>{{About.0.About_missionpara}}</p>
+            </div>
+        </div>
+    </section>
+          
+
+    {% endblock %}

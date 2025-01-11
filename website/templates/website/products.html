@@ -1,0 +1,26 @@
+
+{% extends 'website/basic.html' %}
+{%block title %} AZAD COOPERATIVE PRODUCTS{% endblock %}
+
+{% block body %}
+
+{%load static%}
+<section class="product-section">
+  <div class="news-header" style="align-items:center;">
+    <h2 class="heading2" style="text-align:center;">Products</h2>
+  </div>
+  <div class="product-container">
+    {% for i in Product %}
+    <div class="product-card">
+      <div class="product-image">
+        <img src='/media/{{i.Product_image}}' alt="{{i.Product_name}}">
+      </div>
+      <div class="product-details">
+        <h3 class="product-name">{{i.Product_name}}</h3>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+    {% endblock %}

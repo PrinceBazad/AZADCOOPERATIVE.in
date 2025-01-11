@@ -1,0 +1,27 @@
+{% extends 'website/basic.html' %}
+
+{%block title %} AZAD COOPERATIVE BRANCHES{% endblock %}
+
+{% block body %}
+
+{%load static%}
+  <section class="branches-section">
+    <div class="container"style="display: flex;flex-direction: column;">
+        <h2 class="section-title" >Branches</h2>
+        <div class="branches">
+            <!-- Branch -->
+            {% for i in Branch %}
+            <div class="branch-card">
+                <img src='/media/{{i.Branch_image}}' alt="Head Office" class="branch-image">
+                <div class="branch-info">
+                    <h3>{{i.Branch_name}}</h3>
+                    <p>{{i.Branch_address}}</p>
+                    <p><strong>Phone:</strong>{{i.Branch_phone}}</p>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

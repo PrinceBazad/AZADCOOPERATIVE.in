@@ -1,0 +1,74 @@
+{%load  static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}  {% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'style/style.css' %}">
+  <script defer src="{% static 'script/script.js' %}"></script>
+</head>
+<body class="body">
+  {%load  static %}
+  <header id="header" style="position: fixed;width: 100%;top: 0px;left: 0%;">
+    <nav class="navbar">
+      <div class="logo">
+        <img src='/media/{{Homeslide.0.Logo}}'>
+      </div>
+      <button class="hamburger" id="hamburger"style="padding-right:20px;">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/website/">Home</a></li>
+        <li><a href="/website/aboutus">About Us</a></li>
+        <li><a href="/website/Products">Products</a></li>
+        <li><a href="/website/AnnualReports">Annual Report</a></li>
+        <li><a href="/website/Announcements">Announcements</a></li>
+        <li><a href='/media/{{Byelaw.0.Byelaw_document}}'>Bye laws</a></li>
+      </ul>
+    </nav>
+  </header>
+
+{% block body%}  {% endblock %}
+
+
+  
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo and Head Office Section -->
+      <div class="footer-section">
+        <h2 class="footer-logo"><img src='/media/{{Homeslide.0.Logo}}'/></h2>
+        <p><strong>{{Homeslide.0.Officetype}}:</strong></p>
+        <p>{{Homeslide.0.Heading}}</p>
+        <p>{{Homeslide.0.Address}}</p>
+      </div>
+      
+      <!-- Useful Links Section -->
+      <div class="footer-section">
+        <h3>USEFUL LINKS</h3>
+        <ul class="footer-links">
+          <li><a href="/website/aboutus">About Us</a></li>
+          <li><a href="/website/Products">Products</a></li>
+          <li><a href="/website/Boardofdirectors">Board Of Directors</a></li>
+          <li><a href="/website/Announcements">News & Updates</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact Us Section -->
+      <div class="footer-section">
+        <h3>CONTACT US</h3>
+        <p><strong>Phone:</strong>{{Homeslide.0.Phone1}}</p>
+        <p><strong>Phone:</strong>{{Homeslide.0.Phone2}}</p>
+        <p><strong>E-mail:</strong> <a href="mailto:famemkt@yahoo.in">{{Homeslide.0.Email}}</a></p>
+      </div>
+    
+    <div class="footer-bottom">
+      <p>© Copyright <strong>Azad Society</strong>. All Rights Reserved.</p>
+      <p>Handcrafted with excellence by Invincible Web Solutions.</p>
+    </div>
+  </div>
+  </footer>
+</body>
+</html>

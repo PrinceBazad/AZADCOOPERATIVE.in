@@ -1,0 +1,77 @@
+
+{% extends 'website/basic.html' %}
+{%block title %} AZAD COOPERATIVE {% endblock %}
+
+{% block body %}
+
+
+{%load static%}
+<div class="mainimg">
+  <img src="/media/{{Homeslide.0.Banner}}" alt="Banner Image">
+  <div class="title-wrapper">
+    <span class="title">{{Homeslide.0.Heading}}</span>
+  </div>
+</div>
+  <div class="latest-update">
+    <div class="update-label">
+      Latest Update
+    </div>
+    <div class="update-content">
+      <span class="update-date">{{Homeslide.0.news_date}}</span> 
+      <span class="update-title">{{Homeslide.0.news_heading}}</span>
+    </div>
+  </div>
+  <section class="about-section" id="aboutus">
+    <div class="about-content">
+      <div class="about-images">
+        <img src="https://www.famesociety.in/static/images/about_us-100.jpg" alt="Farmer Smiling" class="image-large">
+      </div>
+      <div class="about-text">
+        <h2 class="heading2">About Us</h2>
+        <p>
+          <strong>{{Homeslide.0.Heading}}</strong> was established in {{Homeslide.0.Establishedyear}} as a Multistate Cooperative Society under Registration No: {{Homeslide.0.Registrationnumber}}- Lum. Located in {{Homeslide.0.Address}}, our society has been dedicated to supporting the agricultural community for decades.
+        </p>
+        <a href="aboutus/" class="read-more-btn">Read More</a>
+      </div>
+    </div>
+  </section>
+  <section class="news-section">
+    <div class="news-header">
+      <h2 class="heading2">News & Updates</h2>
+    </div>
+   
+    <div class="news-card">
+      <div class="news-content">
+        <div class="news-text">
+          <h3><a href="/media/{{Homeslide.0.news_Attachment}}">{{Homeslide.0.news_heading}}</a></h3>
+          <p class="news-date">Posted On: {{Homeslide.0.news_date}}</p>
+        </div>
+        <div class="news-image">
+          <img src='/media/{{Homeslide.0.news_image}}' alt="News Image">
+        </div>
+    </div>
+    
+    <a href="Announcements/" class="news-read-more">Read More</a>
+  </section>
+
+  <section class="discover-more">
+    <h2>Discover More</h2>
+    <div class="divider"></div>
+    <div class="card-container">
+      <div class="card">
+        <a href="aboutus/"><img src="https://www.famesociety.in/static/images/about_us_1%403x.png" alt="About Us"></a>
+      </div>
+      <div class="card">
+        <a href="Products/"><img src="https://www.famesociety.in/static/images/products%403x.png" alt="Products"></a>
+        
+      </div>
+      <div class="card">
+        <a href="Branch/"><img src="https://www.famesociety.in/static/images/our_branches%403x.png" alt="Our Branches"></a>
+        
+      </div>
+    </div>
+  </section>      
+
+
+  
+  {% endblock %}

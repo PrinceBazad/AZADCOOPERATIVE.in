@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Navbar</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header id="header">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="https://www.famesociety.in/static/images/fame_logo%404x.png">
+      </div>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="annualreport.html">Annual Report</a></li>
+        <li><a href="announcements.html">Announcements</a></li>
+        <li><a onclick="showPDF()">Bye laws</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="mainimg">
+    <img src="https://www.famesociety.in/media/slides/FAME_Society_banner_Desktop.jpg"/><br>
+  </div>
+  <div class="latest-update">
+    <div class="update-label">
+      Latest Update
+    </div>
+    <div class="update-content">
+      <span class="update-date">Dec. 5, 2024:</span> 
+      <span class="update-title">Election Programme</span>
+    </div>
+  </div>
+  <section class="about-section" id="aboutus">
+    <div class="about-content">
+      <div class="about-images">
+        <img src="https://www.famesociety.in/static/images/about_us-100.jpg" alt="Farmer Smiling" class="image-large">
+      </div>
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>
+          <strong>The Farmers Agro Cooperative Marketing & Efficient Supply Society</strong> was established in 1956 as a Multistate Cooperative Society under Registration No: L-11015/2/98 - Lum. Located in Anaj Mandi, Narela, Delhi, our society has been dedicated to supporting the agricultural community for decades.
+        </p>
+        <a href="aboutus.html" class="read-more-btn">Read More</a>
+      </div>
+    </div>
+  </section>
+  <section class="news-section">
+    <div class="news-header">
+      <h2>News & Updates</h2>
+    </div>
+    <div class="news-card">
+      <div class="news-content">
+        <div class="news-text">
+          <h3>Election Programme</h3>
+          <p class="news-date">Posted On: Dec. 5, 2024</p>
+        </div>
+        <div class="news-image">
+          <img src="https://www.famesociety.in/media/news/c196da45-c8f2-4db9-ae44-61ffe702b34d.jpg" alt="News Image">
+        </div>
+      </div>
+      <!-- The Read More button now links to a different page -->
+      
+    </div>
+    <a href="#header" class="news-read-more">Read More</a>
+  </section>
+
+  <section class="discover-more">
+    <h2>Discover More</h2>
+    <div class="divider"></div>
+    <div class="card-container">
+      <div class="card">
+        <a href="aboutus.html"><img src="https://www.famesociety.in/static/images/about_us_1%403x.png" alt="About Us"></a>
+        
+      </div>
+      <div class="card">
+        <a href="products.html"><img src="https://www.famesociety.in/static/images/products%403x.png" alt="Products"></a>
+        
+      </div>
+      <div class="card">
+        <a href="branches.html"><img src="https://www.famesociety.in/static/images/our_branches%403x.png" alt="Our Branches"></a>
+        
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo and Head Office Section -->
+      <div class="footer-section">
+        <h2 class="footer-logo"><img src="https://www.famesociety.in/static/images/fame_logo%404x.png"/></h2>
+        <p><strong>Head Office:</strong></p>
+        <p>The Farmers Agro Co-op Mkt & Efficient Supply Society Ltd</p>
+        <p>2047-48, Old Anaj Mandi, Narela, Delhi - 110040</p>
+      </div>
+      
+      <!-- Useful Links Section -->
+      <div class="footer-section">
+        <h3>USEFUL LINKS</h3>
+        <ul class="footer-links">
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="boardofdirectors.html">Board Of Directors</a></li>
+          <li><a href="announcements.html">News & Updates</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact Us Section -->
+      <div class="footer-section">
+        <h3>CONTACT US</h3>
+        <p><strong>Phone:</strong> 011-27283359</p>
+        <p><strong>Phone:</strong> 011-27282359</p>
+        <p><strong>E-mail:</strong> <a href="mailto:famemkt@yahoo.in">famemkt@yahoo.in</a></p>
+      </div>
+    
+    <div class="footer-bottom">
+      <p>© Copyright <strong>FAME Society</strong>. All Rights Reserved.</p>
+      <p>Handcrafted with excellence by Invincible Web Solutions.</p>
+    </div>
+  </div>
+  </footer>
+
+  <script>
+      function showPDF() {
+          window.open('Byelaws.pdf');
+      }
+  </script>
+</body>
+</html>

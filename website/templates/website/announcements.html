@@ -1,0 +1,35 @@
+
+{% extends 'website/basic.html' %}
+{%block title %} AZAD COOPERATIVE ANNOUNCEMENTS{% endblock %}
+
+{% block body %}
+
+{%load static%}
+
+
+
+      
+      <section class="news-section">
+        <div class="mainimg"style="width: 100%;">
+          <img src='/media/{{Announcement.0.Image}}'style="width: 100%;"/><br>
+        </div>
+        <div class="news-header">
+          <h2 class="heading2">News & Updates</h2>
+        </div>
+        <div class="news-card" style="margin-top: 20px;">
+          {% for i in Newsandupdates %}
+          {% load static %}
+          <div class="news-content">
+            <div class="news-text">
+              <h3><a href='/media/{{i.News_attachment}}' style="color: black;">{{i.News_title}}</a></h3>
+              <p class="news-date">Posted On: {{i.News_date}}</p>
+            </div>
+            <div class="news-image">
+              <img src='/media/{{i.News_image}}' alt="News Image">
+            </div>
+            {%endfor%}
+        </div>
+        </div>
+      </section>
+
+      {% endblock %}
